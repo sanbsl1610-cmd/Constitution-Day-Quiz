@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indian Constitution Day Quiz 2026 - Central Railway Sr Sec (EM) School, Bhusawal</title>
+<style>
+  :root {
+    --saffron: #FF9933;
+    --saffron-dark: #E67E00;
+    --white: #FFFFFF;
+    --green: #138808;
+    --green-dark: #0E6B06;
+    --navy: #000080;
+    --navy-light: #1E3A8A;
+    --gold: #D4AF37;
+    --cream: #FFFDF7;
+    --text-dark: #1E293B;
+    --border: #CBD5E1;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  body {
+    background: linear-gradient(135deg, #fff3e6 0%, #f8fafc 50%, #e8f8ea 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    color: var(--text-dark);
+  }
+  .quiz-shell {
+    width: 100%;
+    max-width: 980px;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 18px 45px rgba(0, 0, 128, 0.14);
+    overflow: hidden;
+    border-top: 9px solid var(--saffron);
+    border-bottom: 9px solid var(--green);
+  }
+  /* Header Bar */
+  .header-bar {
+    background: linear-gradient(90deg, var(--navy) 0%, var(--navy-light) 100%);
+    color: var(--white);
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .header-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+  .live-hud {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .hud-pill {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.8);
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #FEF08A;
+  }
+
+  /* Slides */
+  .slide {
+    display: none;
+    padding: 28px 34px;
+    animation: slideFade 0.35s ease;
+  }
+  .slide.active {
+    display: block;
+  }
+  @keyframes slideFade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Slide 1: Welcome & Registration */
+  .welcome-hero {
+    background: linear-gradient(120deg, rgba(255,153,51,0.22) 0%, rgba(255,255,255,0.95) 50%, rgba(19,136,8,0.22) 100%);
+    border: 2px solid var(--gold);
+    border-radius: 16px;
+    padding: 22px 20px;
+    text-align: center;
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .school-name {
+    color: var(--navy);
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    margin-bottom: 8px;
+  }
+  .occasion-pill {
+    display: inline-block;
+    background: var(--navy);
+    color: var(--white);
+    padding: 7px 22px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 128, 0.2);
+  }
+  .wishes-banner {
+    color: #1E293B;
+    font-size: 1.02rem;
+    font-weight: 600;
+  }
+
+  .welcome-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 24px;
+    align-items: stretch;
+  }
+  @media (max-width: 768px) {
+    .welcome-layout { grid-template-columns: 1fr; }
+  }
+
+  .info-panel {
+    background: var(--cream);
+    border: 2px solid #E5D5B0;
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .info-panel h3 {
+    color: var(--navy);
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+    border-bottom: 2px solid var(--saffron);
+    padding-bottom: 6px;
+  }
+  .section-list {
+    list-style: none;
+    margin-bottom: 14px;
+  }
+  .section-list li {
+    padding: 6px 0;
+    font-size: 0.94rem;
+    border-bottom: 1px dashed #CBD5E1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .sec-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--navy);
+    flex-shrink: 0;
+  }
+  .marking-card {
+    background: #FFFBEB;
+    border: 1.5px solid #F59E0B;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .reg-panel {
+    background: #F8FAFC;
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    padding: 22px;
+  }
+  .reg-panel h3 {
+    color: var(--navy);
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+  }
+  .field-group {
+    margin-bottom: 14px;
+  }
+  .field-group label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.92rem;
+    margin-bottom: 5px;
+    color: #334155;
+  }
+  .field-group input, .field-group select {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid #94A3B8;
+    border-radius: 9px;
+    font-size: 1rem;
+    background: var(--white);
+    transition: border-color 0.2s;
+  }
+  .field-group input:focus, .field-group select:focus {
+    outline: none;
+    border-color: var(--navy);
+    box-shadow: 0 0 0 3px rgba(0, 0, 128, 0.1);
+  }
+
+  /* Buttons */
+  .btn {
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+    padding: 12px 26px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .btn:hover:not(:disabled) {
+    background: var(--navy-light);
+    transform: translateY(-1px);
+  }
+  .btn:disabled {
+    background: #94A3B8;
+    cursor: not-allowed;
+  }
+  .btn-green { background: var(--green); }
+  .btn-green:hover:not(:disabled) { background: var(--green-dark); }
+  .btn-saffron { background: var(--saffron-dark); }
+  .btn-saffron:hover:not(:disabled) { background: #CC6E00; }
+
+  /* Section Introduction Slide */
+  .sec-intro-box {
+    text-align: center;
+    background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 100%);
+    border: 2px solid #BFDBFE;
+    border-radius: 16px;
+    padding: 32px 26px;
+  }
+  .sec-badge {
+    display: inline-block;
+    background: var(--saffron);
+    color: var(--white);
+    font-weight: 800;
+    padding: 6px 20px;
+    border-radius: 25px;
+    font-size: 0.92rem;
+    letter-spacing: 0.6px;
+    margin-bottom: 14px;
+  }
+  .sec-intro-box h2 {
+    color: var(--navy);
+    font-size: 1.75rem;
+    margin-bottom: 14px;
+  }
+  .sec-intro-desc {
+    font-size: 1.06rem;
+    color: #334155;
+    max-width: 740px;
+    margin: 0 auto 22px;
+    line-height: 1.65;
+  }
+  .sec-topics-pills {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+  }
+  .topic-chip {
+    background: var(--white);
+    border: 1px solid #93C5FD;
+    color: var(--navy);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 600;
+  }
+  .mark-bar {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 26px;
+  }
+  .mark-pill {
+    padding: 8px 18px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.94rem;
+  }
+  .mp-right { background: #DCFCE7; color: #166534; border: 1px solid #86EFAC; }
+  .mp-wrong { background: #FEE2E2; color: #991B1B; border: 1px solid #FCA5A5; }
+  .mp-max { background: #E0E7FF; color: #1E40AF; border: 1px solid #93C5FD; }
+
+  /* Question Slide */
+  .q-top-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #E2E8F0;
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .q-sec-tag {
+    color: var(--saffron-dark);
+    font-weight: 800;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+  }
+  .q-prog-tag {
+    background: var(--navy);
+    color: var(--white);
+    padding: 5px 14px;
+    border-radius: 14px;
+    font-size: 0.88rem;
+    font-weight: 700;
+  }
+  .visual-stage {
+    text-align: center;
+    background: #F8FAFC;
+    border: 1.5px dashed #94A3B8;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 18px;
+  }
+  .visual-caption {
+    font-size: 0.85rem;
+    color: #475569;
+    font-weight: 600;
+    margin-top: 6px;
+  }
+  .question-prompt {
+    font-size: 1.22rem;
+    font-weight: 700;
+    color: #0F172A;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .options-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  @media (max-width: 650px) {
+    .options-wrap { grid-template-columns: 1fr; }
+  }
+  .option-card {
+    background: var(--white);
+    border: 2px solid #CBD5E1;
+    border-radius: 12px;
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1E293B;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.18s;
+  }
+  .option-card:hover:not(:disabled) {
+    border-color: var(--navy);
+    background: #EFF6FF;
+  }
+  .opt-key {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #E2E8F0;
+    color: var(--navy);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+  .option-card.is-correct {
+    background: #DCFCE7;
+    border-color: #16A34A;
+    color: #14532D;
+  }
+  .option-card.is-correct .opt-key {
+    background: #16A34A;
+    color: var(--white);
+  }
+  .option-card.is-wrong {
+    background: #FEE2E2;
+    border-color: #DC2626;
+    color: #7F1D1D;
+  }
+  .option-card.is-wrong .opt-key {
+    background: #DC2626;
+    color: var(--white);
+  }
+  .feedback-banner {
+    margin-top: 18px;
+    padding: 13px 18px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.98rem;
+    display: none;
+  }
+  .q-bottom-bar {
+    margin-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* Final Slide: Result, Thank You & Certificate */
+  .scorecard-hero {
+    text-align: center;
+    background: linear-gradient(135deg, #FFFBEB 0%, #F0FDF4 100%);
+    border: 2px solid var(--gold);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 22px;
+  }
+  .scorecard-hero h2 {
+    color: var(--navy);
+    font-size: 1.65rem;
+    margin-bottom: 6px;
+  }
+  .compliment-ribbon {
+    display: inline-block;
+    background: var(--navy);
+    color: #FDE047;
+    font-size: 1.55rem;
+    font-weight: 900;
+    padding: 10px 30px;
+    border-radius: 35px;
+    margin: 12px 0;
+    letter-spacing: 0.5px;
+    box-shadow: 0 6px 16px rgba(0, 0, 128, 0.2);
+  }
+  .metrics-grid {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .metric-box {
+    background: var(--white);
+    border: 1.5px solid #CBD5E1;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .thank-you-box {
+    background: #EFF6FF;
+    border-left: 6px solid var(--navy);
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 24px;
+  }
+  .thank-you-box h3 {
+    color: var(--navy);
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+  }
+  .thank-you-box p {
+    line-height: 1.6;
+    color: #1E293B;
+    font-size: 0.98rem;
+  }
+  .cert-section {
+    text-align: center;
+  }
+  .cert-section h3 {
+    color: var(--navy);
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+  }
+  #certificateCanvas {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid var(--navy);
+    border-radius: 10px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+  }
+</style>
+</head>
+<body>
+
+<div class="quiz-shell">
+  <!-- TOP HEADER -->
+  <div class="header-bar">
+    <div class="header-title">🇮🇳 Central Railway Sr Sec (EM) School, Bhusawal — Constitution Day Quiz</div>
+    <div class="live-hud">
+      <div class="hud-pill" id="hudScore">Score: 0</div>
+      <div class="hud-pill" id="hudProgress">Q: 0 / 50</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 1: COLOURFUL WELCOME & REGISTRATION -->
+  <div class="slide active" id="slide-welcome">
+    <div class="welcome-hero">
+      <div class="school-name">Central Railway Sr Sec (EM) School, Bhusawal</div>
+      <div class="occasion-pill">🇮🇳 Indian Constitution Day Quiz — 26 November 2026 🇮🇳</div>
+      <div class="wishes-banner">Heartfelt Good Wishes on Constitution Day (Samvidhan Diwas) from the Principal and Staff!</div>
+    </div>
+
+    <div class="welcome-layout">
+      <div class="info-panel">
+        <div>
+          <h3>📚 Quiz Structure (5 Sections • 50 Questions)</h3>
+          <ul class="section-list">
+            <li><span class="sec-dot" style="background:#FF9933;"></span> <strong>Section 1:</strong> Origin &amp; Sources of Indian Constitution (10 Qs)</li>
+            <li><span class="sec-dot" style="background:#000080;"></span> <strong>Section 2:</strong> Framers of Indian Constitution — Visual &amp; Text (10 Qs)</li>
+            <li><span class="sec-dot" style="background:#138808;"></span> <strong>Section 3:</strong> Uniqueness &amp; Important Articles (10 Qs)</li>
+            <li><span class="sec-dot" style="background:#D97706;"></span> <strong>Section 4:</strong> Fundamental Rights &amp; Real-Life Applications (10 Qs)</li>
+            <li><span class="sec-dot" style="background:#1D4ED8;"></span> <strong>Section 5:</strong> Fundamental Duties &amp; Public Participation (10 Qs)</li>
+          </ul>
+        </div>
+
+        <div class="marking-card">
+          <strong>⚖️ Marking Scheme &amp; Compliment Criteria:</strong><br>
+          • <strong>Right Answer:</strong> <span style="color:#15803d;font-weight:bold;">+2 Marks</span> &nbsp;|&nbsp;
+            <strong>Wrong Answer:</strong> <span style="color:#b91c1c;font-weight:bold;">-1 Mark</span><br>
+          • <strong>45 &amp; above:</strong> Outstanding &nbsp;|&nbsp; <strong>40–44:</strong> Very good<br>
+          • <strong>30–39:</strong> Good &nbsp;|&nbsp; <strong>Below 30:</strong> Try ...try ...try
+        </div>
+      </div>
+
+      <div class="reg-panel">
+        <h3>📝 Participant Registration</h3>
+        <div class="field-group">
+          <label for="regName">Full Name *</label>
+          <input type="text" id="regName" placeholder="Enter your full name" autocomplete="off">
+        </div>
+        <div class="field-group">
+          <label for="regClass">Class / Category *</label>
+          <select id="regClass" onchange="handleClassChange()">
+            <option value="">-- Select Class --</option>
+            <option value="Class 6">Class 6</option>
+            <option value="Class 7">Class 7</option>
+            <option value="Class 8">Class 8</option>
+            <option value="Guest">Guest</option>
+          </select>
+        </div>
+        <div class="field-group">
+          <label for="regSection">Section *</label>
+          <select id="regSection">
+            <option value="">-- Select Section --</option>
+            <option value="A">Section A</option>
+            <option value="B">Section B</option>
+            <option value="C">Section C</option>
+            <option value="D">Section D</option>
+            <option value="Guest">Not Applicable (Guest)</option>
+          </select>
+        </div>
+
+        <button class="btn btn-green" style="width:100%; margin-top:8px; font-size:1.05rem;" onclick="beginQuiz()">
+          Start Constitution Day Quiz ➔
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: SECTION INTRODUCTION -->
+  <div class="slide" id="slide-sec-intro">
+    <div class="sec-intro-box">
+      <div class="sec-badge" id="secIntroBadge">SECTION 1 OF 5</div>
+      <h2 id="secIntroTitle">Section Title</h2>
+      <p class="sec-intro-desc" id="secIntroDesc">Section overview text.</p>
+      <div class="sec-topics-pills" id="secIntroTopics"></div>
+
+      <div class="mark-bar">
+        <div class="mark-pill mp-right">✔ Right Answer: +2 Marks</div>
+        <div class="mark-pill mp-wrong">✘ Wrong Answer: -1 Mark</div>
+        <div class="mark-pill mp-max">🏆 Section Total: 20 Marks (10 Questions)</div>
+      </div>
+
+      <button class="btn" style="font-size:1.05rem;" onclick="startSectionQuestions()">
+        Start Section Questions ➔
+      </button>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: QUESTION SLIDE -->
+  <div class="slide" id="slide-question">
+    <div class="q-top-meta">
+      <span class="q-sec-tag" id="qSecName">Section 1</span>
+      <span class="q-prog-tag" id="qProgressLabel">Question 1 of 10 (Overall 1 / 50)</span>
+    </div>
+
+    <div class="visual-stage" id="qVisualStage" style="display:none;"></div>
+
+    <div class="question-prompt" id="qPromptText">Question text?</div>
+
+    <div class="options-wrap" id="qOptionsWrap"></div>
+
+    <div class="feedback-banner" id="qFeedbackBanner"></div>
+
+    <div class="q-bottom-bar">
+      <span style="font-size:0.9rem; color:#475569; font-weight:600;">
+        Marking Rule: +2 for Right Answer | -1 for Wrong Answer
+      </span>
+      <button class="btn" id="qNextBtn" onclick="advanceQuiz()" disabled>Next Question ➔</button>
+    </div>
+  </div>
+
+  <!-- SLIDE 4: FINAL RESULT, THANK YOU & DOWNLOADABLE JPG CERTIFICATE -->
+  <div class="slide" id="slide-final">
+    <div class="scorecard-hero">
+      <h2>🎉 Congratulations, <span id="finalParticipantName">Participant</span>!</h2>
+      <p style="font-weight:700; color:#475569; margin-top:4px;" id="finalParticipantMeta">Class 6 - Section A</p>
+
+      <div class="compliment-ribbon" id="finalComplimentBadge">Outstanding</div>
+
+      <div class="metrics-grid">
+        <div class="metric-box" style="color:var(--navy);">Total Marks: <span id="finalScoreVal">0</span> / 100</div>
+        <div class="metric-box" style="color:#15803d;">Right (+2): <span id="finalRightVal">0</span></div>
+        <div class="metric-box" style="color:#b91c1c;">Wrong (-1): <span id="finalWrongVal">0</span></div>
+      </div>
+    </div>
+
+    <div class="thank-you-box">
+      <h3>🙏 Thank You Note from the Quiz Master</h3>
+      <p>
+        Thank you for participating with enthusiasm and pride in the <strong>Indian Constitution Day Quiz (26 November 2026)</strong>. May the timeless values of Justice, Liberty, Equality, and Fraternity inspire you to grow into an aware, responsible, and proud citizen of India.<br>
+        <strong>— Sh. S.K. Upadhyay, Librarian, Central Railway Sr Sec School Bhusawal</strong>
+      </p>
+    </div>
+
+    <div class="cert-section">
+      <h3>📜 Certificate of Appreciation</h3>
+      <canvas id="certificateCanvas" width="1050" height="740"></canvas>
+      <br><br>
+      <button class="btn btn-saffron" style="font-size:1.05rem; padding:14px 28px;" onclick="downloadCertificateJPG()">
+        ⬇ Download Certificate (JPG)
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ================= SCORM 1.2 LMS API BRIDGE ================= */
+var scormAPI = null;
+function findSCORMAPI(win) {
+  var attempts = 0;
+  while ((win.API == null) && (win.parent != null) && (win.parent != win)) {
+    attempts++;
+    if (attempts > 7) return null;
+    win = win.parent;
+  }
+  return win.API;
+}
+function scormInit() {
+  scormAPI = findSCORMAPI(window);
+  if (scormAPI) {
+    scormAPI.LMSInitialize("");
+    scormAPI.LMSSetValue("cmi.core.lesson_status", "incomplete");
+    scormAPI.LMSCommit("");
+  }
+}
+function scormComplete(rawScore, maxScore) {
+  if (scormAPI) {
+    var pct = Math.max(0, Math.min(100, Math.round((rawScore / maxScore) * 100)));
+    scormAPI.LMSSetValue("cmi.core.score.raw", pct);
+    scormAPI.LMSSetValue("cmi.core.score.min", "0");
+    scormAPI.LMSSetValue("cmi.core.score.max", "100");
+    scormAPI.LMSSetValue("cmi.core.lesson_status", rawScore >= 30 ? "passed" : "completed");
+    scormAPI.LMSCommit("");
+    scormAPI.LMSFinish("");
+  }
+}
+window.addEventListener("load", scormInit);
+
+/* ================= CUSTOM SVG VISUALS FOR SECTION 2 ================= */
+const framerVisuals = {
+  ambedkar: `
+    <svg width="210" height="145" viewBox="0 0 210 145">
+      <defs>
+        <linearGradient id="bgAmb" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#1E3A8A"/>
+          <stop offset="100%" stop-color="#0F172A"/>
+        </linearGradient>
+      </defs>
+      <rect width="210" height="145" rx="12" fill="url(#bgAmb)" stroke="#D4AF37" stroke-width="2.5"/>
+      <circle cx="105" cy="52" r="24" fill="#E8B88A"/>
+      <path d="M81 44 C82 26, 128 26, 129 44" fill="#1E293B"/>
+      <rect x="88" y="48" width="14" height="8" rx="2" fill="none" stroke="#111827" stroke-width="2.2"/>
+      <rect x="108" y="48" width="14" height="8" rx="2" fill="none" stroke="#111827" stroke-width="2.2"/>
+      <line x1="102" y1="52" x2="108" y2="52" stroke="#111827" stroke-width="2.2"/>
+      <path d="M68 122 C68 86, 142 86, 142 122 Z" fill="#2563EB"/>
+      <polygon points="105,82 97,94 113,94" fill="#FFFFFF"/>
+      <polygon points="105,86 100,108 105,115 110,108" fill="#DC2626"/>
+      <rect x="148" y="82" width="24" height="32" rx="3" fill="#B91C1C" stroke="#FDE047" stroke-width="1.5"/>
+      <text x="160" y="102" font-size="8" fill="#FFF" text-anchor="middle" font-weight="bold">LAW</text>
+      <text x="105" y="137" font-size="10.5" fill="#FDE047" text-anchor="middle" font-weight="bold">Chairman, Drafting Committee (1947)</text>
+    </svg>
+    <div class="visual-caption">Visual Clue: Iconic Blue Suit, Round Spectacles &amp; Law Book</div>
+  `,
+  rajendra: `
+    <svg width="210" height="145" viewBox="0 0 210 145">
+      <rect width="210" height="145" rx="12" fill="#064E3B" stroke="#D4AF37" stroke-width="2.5"/>
+      <circle cx="105" cy="56" r="23" fill="#DFAA78"/>
+      <polygon points="78,40 105,18 132,40 127,46 83,46" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+      <path d="M93 64 Q105 58 117 64" stroke="#F8FAFC" stroke-width="3.5" fill="none"/>
+      <path d="M68 122 C68 86, 142 86, 142 122 Z" fill="#F8FAFC"/>
+      <rect x="150" y="92" width="22" height="10" rx="2" fill="#92400E"/>
+      <line x1="161" y1="102" x2="161" y2="120" stroke="#92400E" stroke-width="3.5"/>
+      <text x="105" y="137" font-size="10.5" fill="#FDE047" text-anchor="middle" font-weight="bold">President, Constituent Assembly (1946)</text>
+    </svg>
+    <div class="visual-caption">Visual Clue: White Gandhi Cap, Thick Moustache &amp; Presiding Gavel</div>
+  `,
+  patel: `
+    <svg width="210" height="145" viewBox="0 0 210 145">
+      <rect width="210" height="145" rx="12" fill="#7C2D12" stroke="#D4AF37" stroke-width="2.5"/>
+      <circle cx="105" cy="54" r="24" fill="#E0AC69"/>
+      <path d="M82 48 Q80 58 84 64" stroke="#E2E8F0" stroke-width="3.5" fill="none"/>
+      <path d="M128 48 Q130 58 126 64" stroke="#E2E8F0" stroke-width="3.5" fill="none"/>
+      <path d="M68 122 C68 86, 142 86, 142 122 Z" fill="#F1F5F9"/>
+      <line x1="78" y1="118" x2="128" y2="88" stroke="#94A3B8" stroke-width="5"/>
+      <rect x="148" y="84" width="32" height="24" rx="4" fill="#D97706" stroke="#FFF" stroke-width="1.5"/>
+      <text x="164" y="100" font-size="9.5" fill="#FFF" text-anchor="middle" font-weight="bold">562+</text>
+      <text x="105" y="137" font-size="10.5" fill="#FDE047" text-anchor="middle" font-weight="bold">Iron Man of India • Advisory Committee</text>
+    </svg>
+    <div class="visual-caption">Visual Clue: Headed Fundamental Rights &amp; Minorities Advisory Committee</div>
+  `,
+  sarojini: `
+    <svg width="210" height="145" viewBox="0 0 210 145">
+      <rect width="210" height="145" rx="12" fill="#831843" stroke="#D4AF37" stroke-width="2.5"/>
+      <path d="M66 122 C66 42, 144 42, 144 122 Z" fill="#DB2777"/>
+      <circle cx="105" cy="56" r="21" fill="#E8B88A"/>
+      <path d="M85 48 C88 34, 122 34, 125 48" fill="#1E293B"/>
+      <circle cx="105" cy="52" r="2.8" fill="#DC2626"/>
+      <circle cx="162" cy="96" r="15" fill="#FBBF24" stroke="#FFF" stroke-width="1.5"/>
+      <text x="162" y="100" font-size="9" fill="#831843" text-anchor="middle" font-weight="bold">1925</text>
+      <text x="105" y="137" font-size="10.5" fill="#FDE047" text-anchor="middle" font-weight="bold">Nightingale of India • Woman Framer</text>
+    </svg>
+    <div class="visual-caption">Visual Clue: Famous Poetess, Freedom Fighter &amp; First Woman Governor</div>
+  `,
+  calligraphy: `
+    <svg width="240" height="135" viewBox="0 0 240 135">
+      <rect x="6" y="6" width="228" height="123" rx="10" fill="#FEF3C7" stroke="#B45309" stroke-width="3"/>
+      <rect x="14" y="14" width="212" height="107" rx="6" fill="none" stroke="#D97706" stroke-width="1.5" stroke-dasharray="5 3"/>
+      <text x="120" y="46" font-family="Georgia, serif" font-style="italic" font-size="16" fill="#78350F" text-anchor="middle" font-weight="bold">Flowing Italic Calligraphy</text>
+      <line x1="36" y1="62" x2="204" y2="62" stroke="#D97706" stroke-width="1.5"/>
+      <line x1="36" y1="78" x2="204" y2="78" stroke="#D97706" stroke-width="1.5"/>
+      <text x="120" y="99" font-size="11" fill="#92400E" text-anchor="middle" font-weight="bold">395 Articles • 8 Schedules • 6 Months</text>
+      <text x="120" y="115" font-size="10" fill="#B45309" text-anchor="middle">432 Fountain Pen Nibs Used (No Fee Charged)</text>
+    </svg>
+    <div class="visual-caption">Visual Clue: Handwritten Original English Copy of the Constitution</div>
+  `
+};
+
+/* ================= 5 SECTIONS × 10 QUESTIONS (AGE-APPROPRIATE FOR CLASSES 6–8) ================= */
+const quizData = [
+  {
+    title: "Section 1: Origin and Sources of Indian Constitution",
+    desc: "Discover how the world's largest democracy created its supreme rulebook! This section covers the historic journey of the Constituent Assembly, landmark dates, and the best constitutional features India adapted from other nations.",
+    topics: ["Constituent Assembly", "26 Nov 1949 & 26 Jan 1950", "Borrowed Features", "Objectives Resolution"],
+    questions: [
+      { q: "On which historic date did the Constituent Assembly formally adopt the Constitution of India?", opts: ["15 August 1947", "26 November 1949", "26 January 1950", "2 October 1948"], ans: 1 },
+      { q: "How much exact time did the Constituent Assembly take to complete the drafting of the Indian Constitution?", opts: ["1 year, 8 months, 12 days", "2 years, 11 months, 18 days", "3 years, 4 months, 10 days", "4 years, 2 months, 15 days"], ans: 1 },
+      { q: "From which country's constitution did India borrow the idea of 'Fundamental Rights'?", opts: ["United Kingdom", "United States of America (USA)", "Canada", "Australia"], ans: 1 },
+      { q: "The 'Parliamentary System of Government' and 'Rule of Law' in India were inspired by which country?", opts: ["France", "United Kingdom (Britain)", "Russia (USSR)", "Ireland"], ans: 1 },
+      { q: "Which country inspired the 'Directive Principles of State Policy (DPSP)' in our Constitution?", opts: ["Ireland", "Germany", "Japan", "South Africa"], ans: 0 },
+      { q: "The famous Preamble ideals of 'Liberty, Equality, and Fraternity' were inspired by which country?", opts: ["USA", "France (French Revolution)", "Canada", "Switzerland"], ans: 1 },
+      { q: "From which country did India adopt the concept of 'Fundamental Duties'?", opts: ["Australia", "Former USSR (Russia)", "United Kingdom", "South Africa"], ans: 1 },
+      { q: "Which major pre-independence Act served as the largest structural source for the Indian Constitution?", opts: ["Rowlatt Act 1919", "Government of India Act 1935", "Indian Councils Act 1909", "Pitt's India Act 1784"], ans: 1 },
+      { q: "Who introduced the historic 'Objectives Resolution' on 13 December 1946, which later shaped the Preamble?", opts: ["Dr. B.R. Ambedkar", "Pandit Jawaharlal Nehru", "Sardar Vallabhbhai Patel", "Dr. Rajendra Prasad"], ans: 1 },
+      { q: "Why was 26 January 1950 chosen as the date to enforce the Constitution of India?", opts: ["To honour the 'Purna Swaraj' declaration of 26 January 1930", "It was Dr. Ambedkar's birthday", "The Constituent Assembly met first on this date", "India won freedom on this date"], ans: 0 }
+    ]
+  },
+  {
+    title: "Section 2: Framers of Indian Constitution",
+    desc: "Salute the brilliant minds, freedom fighters, women leaders, and artists who crafted our Constitution! Observe the visual clues carefully and answer questions about the architects of modern India.",
+    topics: ["Dr. B.R. Ambedkar", "Dr. Rajendra Prasad", "Drafting Committee", "Women Framers & Artists"],
+    questions: [
+      { visual: framerVisuals.ambedkar, q: "Identify this great leader, known as the 'Chief Architect of the Indian Constitution' and Chairman of the Drafting Committee:", opts: ["Dr. Rajendra Prasad", "Dr. B.R. Ambedkar", "B.N. Rau", "K.M. Munshi"], ans: 1 },
+      { visual: framerVisuals.rajendra, q: "Identify the statesman shown above who served as the permanent President of the Constituent Assembly:", opts: ["Dr. Sachchidananda Sinha", "Dr. Rajendra Prasad", "C. Rajagopalachari", "Maulana Abul Kalam Azad"], ans: 1 },
+      { visual: framerVisuals.patel, q: "Identify this leader who chaired the Advisory Committee on Fundamental Rights & Minorities and united 562 princely states:", opts: ["Sardar Vallabhbhai Patel", "Govind Ballabh Pant", "J.B. Kripalani", "T.T. Krishnamachari"], ans: 0 },
+      { visual: framerVisuals.sarojini, q: "Identify this renowned poetess and woman member of the Constituent Assembly, popularly called the 'Nightingale of India':", opts: ["Sucheta Kripalani", "Sarojini Naidu", "Vijaya Lakshmi Pandit", "Durgabai Deshmukh"], ans: 1 },
+      { visual: framerVisuals.calligraphy, q: "Who was the master calligrapher who handwrote the entire original English Constitution in flowing italic letters?", opts: ["Nandalal Bose", "Prem Behari Narain Raizada", "Beohar Rammanohar Sinha", "Vasant Krishan Vaidya"], ans: 1 },
+      { q: "Who served as the Constitutional Advisor to the Constituent Assembly and prepared its initial draft?", opts: ["Sir B.N. Rau", "Alladi Krishnaswami Ayyar", "N. Gopalaswami Ayyangar", "H.C. Mookherjee"], ans: 0 },
+      { q: "Who presided as the temporary President during the very first sitting of the Constituent Assembly on 9 December 1946?", opts: ["Dr. Rajendra Prasad", "Dr. Sachchidananda Sinha", "Pandit Jawaharlal Nehru", "Dr. B.R. Ambedkar"], ans: 1 },
+      { q: "How many women members were part of the Indian Constituent Assembly that drafted our Constitution?", opts: ["5", "10", "15", "20"], ans: 2 },
+      { q: "Which famous Santiniketan artist led the team that illustrated and decorated the original pages of the Constitution?", opts: ["Raja Ravi Varma", "Nandalal Bose", "Jamini Roy", "Abanindranath Tagore"], ans: 1 },
+      { q: "How many total members (including the Chairman) were in the Drafting Committee set up on 29 August 1947?", opts: ["5 members", "7 members", "9 members", "12 members"], ans: 1 }
+    ]
+  },
+  {
+    title: "Section 3: Its Uniqueness and Important Articles",
+    desc: "What makes India's Constitution truly special across the globe? Test your knowledge of its record length, helium-preserved original copies, Schedules, and landmark Articles.",
+    topics: ["World's Longest Written Constitution", "Key Articles (14, 17, 21A, 32)", "Eighth Schedule", "42nd Amendment"],
+    questions: [
+      { q: "What unique world record does the Constitution of India hold among all sovereign nations?", opts: ["It is the shortest constitution", "It is the longest written constitution in the world", "It is completely unwritten", "It has never been amended"], ans: 1 },
+      { q: "When adopted in November 1949, how many Articles and Schedules did the original Indian Constitution have?", opts: ["395 Articles and 8 Schedules", "448 Articles and 12 Schedules", "250 Articles and 10 Schedules", "300 Articles and 6 Schedules"], ans: 0 },
+      { q: "Where are the original hand-written Hindi and English manuscripts of the Indian Constitution preserved?", opts: ["Rashtrapati Bhavan", "Helium-filled cases in the Parliament Library, New Delhi", "Supreme Court Building", "National Museum, Kolkata"], ans: 1 },
+      { q: "Which Article of the Indian Constitution abolishes 'Untouchability' and forbids its practice in any form?", opts: ["Article 14", "Article 17", "Article 19", "Article 21"], ans: 1 },
+      { q: "Which Article makes free and compulsory education a Fundamental Right for all children aged 6 to 14 years?", opts: ["Article 15", "Article 21A", "Article 24", "Article 32"], ans: 1 },
+      { q: "Which Article did Dr. B.R. Ambedkar describe as the 'Heart and Soul of the Indian Constitution'?", opts: ["Article 14 (Right to Equality)", "Article 19 (Freedom of Speech)", "Article 32 (Right to Constitutional Remedies)", "Article 51A (Fundamental Duties)"], ans: 2 },
+      { q: "Which Schedule of the Indian Constitution contains the list of 22 officially recognized languages of India?", opts: ["First Schedule", "Fourth Schedule", "Eighth Schedule", "Twelfth Schedule"], ans: 2 },
+      { q: "Which Constitutional Amendment Act added the words 'Socialist', 'Secular', and 'Integrity' to the Preamble?", opts: ["1st Amendment (1951)", "42nd Amendment (1976)", "44th Amendment (1978)", "86th Amendment (2002)"], ans: 1 },
+      { q: "Which Article lays down the procedure for Parliament to amend the Constitution of India?", opts: ["Article 352", "Article 356", "Article 368", "Article 370"], ans: 2 },
+      { q: "What does the term 'Secular' in the Indian Preamble mean?", opts: ["India has one official state religion", "The State treats all religions equally and has no official religion", "Religious festivals cannot be celebrated", "Only one religion is taught in schools"], ans: 1 }
+    ]
+  },
+  {
+    title: "Section 4: Fundamental Rights and Real-Life Applications",
+    desc: "Fundamental Rights (Part III) are the shield that protects every citizen's dignity and freedom. Read real-life scenarios and identify which right comes to the rescue!",
+    topics: ["Six Fundamental Rights", "Right to Equality", "Right against Exploitation", "Child Protection & Remedies"],
+    questions: [
+      { q: "How many Fundamental Rights are currently guaranteed to Indian citizens under Part III of the Constitution?", opts: ["5", "6", "7", "8"], ans: 1 },
+      { q: "A 13-year-old child is made to work in a dangerous chemical factory instead of going to school. Which Fundamental Right is violated?", opts: ["Right to Freedom of Religion", "Right against Exploitation (Article 24)", "Cultural and Educational Rights", "Right to Constitutional Remedies"], ans: 1 },
+      { q: "A public playground stops a child from entering because of their caste or place of birth. Which Fundamental Right protects the child?", opts: ["Right to Equality (Article 15)", "Right against Exploitation", "Right to Freedom of Religion", "Right to Property"], ans: 0 },
+      { q: "Citizens hold a peaceful, unarmed march in their town to raise awareness about saving water. Which right allows this?", opts: ["Right to Freedom (Article 19)", "Article 23", "Article 29", "Article 30"], ans: 0 },
+      { q: "A linguistic minority group opens a school to preserve its mother tongue and culture. Which Fundamental Right supports them?", opts: ["Right to Equality", "Cultural and Educational Rights (Articles 29–30)", "Right against Exploitation", "Right to Vote"], ans: 1 },
+      { q: "If a citizen's Fundamental Right is taken away, which court can they approach directly under Article 32?", opts: ["District Magistrate Office", "Supreme Court of India", "Gram Panchayat", "Traffic Court"], ans: 1 },
+      { q: "Every person in India is free to follow, practice, and share their religion peacefully under which group of Articles?", opts: ["Articles 14–18", "Articles 19–22", "Articles 25–28", "Articles 29–30"], ans: 2 },
+      { q: "Which right was removed from the list of Fundamental Rights by the 44th Amendment (1978) and made a legal right?", opts: ["Right to Education", "Right to Property", "Right to Equality", "Right to Freedom"], ans: 1 },
+      { q: "According to the Supreme Court, 'Right to Life' under Article 21 also includes which everyday necessity?", opts: ["Right to clean air, safe drinking water, and a healthy environment", "Right to drive without a helmet", "Right to skip school exams", "Right to park anywhere"], ans: 0 },
+      { q: "Equal opportunity in government jobs without discrimination on gender, caste, or religion is guaranteed by:", opts: ["Right to Equality (Article 16)", "Right to Freedom of Religion", "Right against Exploitation", "Cultural Rights"], ans: 0 }
+    ]
+  },
+  {
+    title: "Section 5: Fundamental Duties and Public Participation",
+    desc: "True democracy shines when citizens perform their duties with pride! Explore our 11 Fundamental Duties (Article 51A), respect for national symbols, environment care, and civic participation.",
+    topics: ["11 Fundamental Duties (Art. 51A)", "Respecting National Symbols", "Protecting Public Property", "Voting & Gram Sabha"],
+    questions: [
+      { q: "How many Fundamental Duties are listed for Indian citizens under Article 51A of the Constitution?", opts: ["8", "10", "11", "12"], ans: 2 },
+      { q: "When the National Anthem 'Jana Gana Mana' is played in school, what is our Fundamental Duty?", opts: ["Stand in attention and show utmost respect", "Keep walking to class", "Talk with friends", "Check mobile phones"], ans: 0 },
+      { q: "Scribbling on train coaches, breaking station benches, or littering railway tracks violates which Fundamental Duty?", opts: ["To safeguard public property and abjure violence", "To develop scientific temper", "To defend the country", "To value composite culture"], ans: 0 },
+      { q: "Planting saplings, saving rivers from plastic pollution, and being kind to animals fulfill which Fundamental Duty?", opts: ["To protect and improve the natural environment", "To strive towards excellence", "To renounce practices derogatory to women", "To cherish freedom struggle ideals"], ans: 0 },
+      { q: "Which 11th Fundamental Duty was added by the 86th Amendment Act in 2002?", opts: ["Duty to pay taxes on time", "Duty of parents/guardians to provide education opportunities to children aged 6–14", "Duty to vote in every election", "Duty to learn three languages"], ans: 1 },
+      { q: "At what minimum age does an Indian citizen earn the right to vote in Lok Sabha and State Assembly elections?", opts: ["16 years", "18 years", "21 years", "25 years"], ans: 1 },
+      { q: "Asking 'Why?' and 'How?', rejecting superstitions, and using logic fulfill which Fundamental Duty?", opts: ["To develop scientific temper, humanism, and spirit of inquiry", "To safeguard public property", "To defend the nation", "To respect the National Flag"], ans: 0 },
+      { q: "In Indian villages, which grassroots democratic body allows all adult citizens to participate directly in local governance?", opts: ["Gram Sabha (Panchayati Raj)", "Reserve Bank of India", "Supreme Court", "Railway Board"], ans: 0 },
+      { q: "Since which year has 26 November been celebrated across India as 'Constitution Day (Samvidhan Diwas)'?", opts: ["1950", "1995", "2015 (125th birth anniversary year of Dr. B.R. Ambedkar)", "2022"], ans: 2 },
+      { q: "How can students of Classes 6 to 8 best live the spirit of the Indian Constitution at school?", opts: ["By treating everyone equally, keeping school property clean, and following rules honestly", "By ignoring assembly rules", "By wasting drinking water", "By excluding new classmates"], ans: 0 }
+    ]
+  }
+];
+
+/* ================= QUIZ CONTROLLER ================= */
+let participantName = "";
+let participantClass = "";
+let participantSection = "";
+let secIndex = 0;
+let qIndex = 0;
+let totalScore = 0;
+let rightAnswers = 0;
+let wrongAnswers = 0;
+let isQuestionLocked = false;
+
+function handleClassChange() {
+  const cls = document.getElementById("regClass").value;
+  const sec = document.getElementById("regSection");
+  if (cls === "Guest") {
+    sec.value = "Guest";
+  } else if (sec.value === "Guest") {
+    sec.value = "";
+  }
+}
+
+function switchSlide(slideId) {
+  document.querySelectorAll(".slide").forEach(el => el.classList.remove("active"));
+  document.getElementById(slideId).classList.add("active");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function beginQuiz() {
+  participantName = document.getElementById("regName").value.trim();
+  participantClass = document.getElementById("regClass").value;
+  participantSection = document.getElementById("regSection").value;
+
+  if (!participantName) {
+    alert("Please enter your Full Name to begin.");
+    document.getElementById("regName").focus();
+    return;
+  }
+  if (!participantClass) {
+    alert("Please select your Class or Guest from the dropdown.");
+    document.getElementById("regClass").focus();
+    return;
+  }
+  if (!participantSection) {
+    alert("Please select your Section.");
+    document.getElementById("regSection").focus();
+    return;
+  }
+
+  secIndex = 0;
+  qIndex = 0;
+  totalScore = 0;
+  rightAnswers = 0;
+  wrongAnswers = 0;
+  updateHUD(0);
+  openSectionIntro();
+}
+
+function updateHUD(overallQ) {
+  document.getElementById("hudScore").innerText = `Score: ${totalScore}`;
+  document.getElementById("hudProgress").innerText = `Q: ${overallQ} / 50`;
+}
+
+function openSectionIntro() {
+  const sec = quizData[secIndex];
+  document.getElementById("secIntroBadge").innerText = `SECTION ${secIndex + 1} OF 5`;
+  document.getElementById("secIntroTitle").innerText = sec.title;
+  document.getElementById("secIntroDesc").innerText = sec.desc;
+
+  const topicsWrap = document.getElementById("secIntroTopics");
+  topicsWrap.innerHTML = "";
+  sec.topics.forEach(t => {
+    const chip = document.createElement("span");
+    chip.className = "topic-chip";
+    chip.innerText = "✦ " + t;
+    topicsWrap.appendChild(chip);
+  });
+
+  switchSlide("slide-sec-intro");
+}
+
+function startSectionQuestions() {
+  qIndex = 0;
+  renderQuestion();
+  switchSlide("slide-question");
+}
+
+function renderQuestion() {
+  isQuestionLocked = false;
+  const sec = quizData[secIndex];
+  const qObj = sec.questions[qIndex];
+  const overallNumber = secIndex * 10 + qIndex + 1;
+
+  updateHUD(overallNumber);
+  document.getElementById("qSecName").innerText = sec.title;
+  document.getElementById("qProgressLabel").innerText = `Question ${qIndex + 1} of 10 (Overall ${overallNumber} / 50)`;
+
+  const visualStage = document.getElementById("qVisualStage");
+  if (qObj.visual) {
+    visualStage.innerHTML = qObj.visual;
+    visualStage.style.display = "block";
+  } else {
+    visualStage.innerHTML = "";
+    visualStage.style.display = "none";
+  }
+
+  document.getElementById("qPromptText").innerText = `${qIndex + 1}. ${qObj.q}`;
+
+  const optionsWrap = document.getElementById("qOptionsWrap");
+  optionsWrap.innerHTML = "";
+  const optionLetters = ["A", "B", "C", "D"];
+
+  qObj.opts.forEach((optText, i) => {
+    const btn = document.createElement("button");
+    btn.className = "option-card";
+    btn.innerHTML = `<span class="opt-key">${optionLetters[i]}</span><span>${optText}</span>`;
+    btn.onclick = () => evaluateAnswer(i, btn);
+    optionsWrap.appendChild(btn);
+  });
+
+  const fbBanner = document.getElementById("qFeedbackBanner");
+  fbBanner.style.display = "none";
+  fbBanner.innerText = "";
+
+  const nextBtn = document.getElementById("qNextBtn");
+  nextBtn.disabled = true;
+  if (secIndex === 4 && qIndex === 9) {
+    nextBtn.innerText = "Finish Quiz & View Certificate ➔";
+  } else if (qIndex === 9) {
+    nextBtn.innerText = `Proceed to Section ${secIndex + 2} ➔`;
+  } else {
+    nextBtn.innerText = "Next Question ➔";
+  }
+}
+
+function evaluateAnswer(chosenIdx, chosenBtn) {
+  if (isQuestionLocked) return;
+  isQuestionLocked = true;
+
+  const qObj = quizData[secIndex].questions[qIndex];
+  const buttons = document.querySelectorAll(".option-card");
+  buttons.forEach(b => b.disabled = true);
+
+  const fbBanner = document.getElementById("qFeedbackBanner");
+  fbBanner.style.display = "block";
+
+  if (chosenIdx === qObj.ans) {
+    chosenBtn.classList.add("is-correct");
+    totalScore += 2;
+    rightAnswers++;
+    fbBanner.style.background = "#DCFCE7";
+    fbBanner.style.color = "#14532D";
+    fbBanner.innerText = "✔ Correct Answer! (+2 Marks awarded)";
+  } else {
+    chosenBtn.classList.add("is-wrong");
+    buttons[qObj.ans].classList.add("is-correct");
+    totalScore -= 1;
+    wrongAnswers++;
+    fbBanner.style.background = "#FEE2E2";
+    fbBanner.style.color = "#7F1D1D";
+    fbBanner.innerText = `✘ Wrong Answer! (-1 Mark deducted). Correct Option: ${qObj.opts[qObj.ans]}`;
+  }
+
+  const overallNumber = secIndex * 10 + qIndex + 1;
+  updateHUD(overallNumber);
+  document.getElementById("qNextBtn").disabled = false;
+}
+
+function advanceQuiz() {
+  if (qIndex < 9) {
+    qIndex++;
+    renderQuestion();
+  } else if (secIndex < 4) {
+    secIndex++;
+    openSectionIntro();
+  } else {
+    renderFinalSlide();
+  }
+}
+
+function computeCompliment(scoreVal) {
+  if (scoreVal >= 45) return "Outstanding";
+  if (scoreVal >= 40) return "Very good";
+  if (scoreVal >= 30) return "Good";
+  return "Try ...try ...try";
+}
+
+function renderFinalSlide() {
+  const complimentText = computeCompliment(totalScore);
+  const metaLabel = participantClass === "Guest"
+    ? "Category: Guest"
+    : `${participantClass} — Section ${participantSection}`;
+
+  document.getElementById("finalParticipantName").innerText = participantName;
+  document.getElementById("finalParticipantMeta").innerText = metaLabel;
+  document.getElementById("finalComplimentBadge").innerText = complimentText;
+  document.getElementById("finalScoreVal").innerText = totalScore;
+  document.getElementById("finalRightVal").innerText = rightAnswers;
+  document.getElementById("finalWrongVal").innerText = wrongAnswers;
+
+  switchSlide("slide-final");
+  drawCertificateCanvas(participantName, metaLabel, totalScore, complimentText);
+  scormComplete(totalScore, 100);
+}
+
+/* ================= HIGH-RESOLUTION DOWNLOADABLE JPG CERTIFICATE ================= */
+function drawCertificateCanvas(name, classMeta, scoreVal, compliment) {
+  const canvas = document.getElementById("certificateCanvas");
+  const ctx = canvas.getContext("2d");
+  const W = canvas.width;
+  const H = canvas.height;
+
+  // Warm parchment background
+  ctx.fillStyle = "#FFFDF7";
+  ctx.fillRect(0, 0, W, H);
+
+  // Subtle corner watermarks
+  ctx.fillStyle = "rgba(255, 153, 51, 0.08)";
+  ctx.beginPath();
+  ctx.moveTo(0, 0); ctx.lineTo(260, 0); ctx.lineTo(0, 260); ctx.closePath(); ctx.fill();
+
+  ctx.fillStyle = "rgba(19, 136, 8, 0.08)";
+  ctx.beginPath();
+  ctx.moveTo(W, H); ctx.lineTo(W - 260, H); ctx.lineTo(W, H - 260); ctx.closePath(); ctx.fill();
+
+  // Ornate Tricolor & Gold Frame
+  ctx.strokeStyle = "#FF9933";
+  ctx.lineWidth = 14;
+  ctx.strokeRect(16, 16, W - 32, H - 32);
+
+  ctx.strokeStyle = "#000080";
+  ctx.lineWidth = 4;
+  ctx.strokeRect(30, 30, W - 60, H - 60);
+
+  ctx.strokeStyle = "#138808";
+  ctx.lineWidth = 8;
+  ctx.strokeRect(40, 40, W - 80, H - 80);
+
+  // School Name Header
+  ctx.textAlign = "center";
+  ctx.fillStyle = "#000080";
+  ctx.font = "bold 30px Georgia, serif";
+  ctx.fillText("CENTRAL RAILWAY SR SEC (EM) SCHOOL, BHUSAWAL", W / 2, 98);
+
+  // Ribbon Title
+  ctx.fillStyle = "#FF9933";
+  ctx.fillRect(220, 118, W - 440, 46);
+  ctx.fillStyle = "#FFFFFF";
+  ctx.font = "bold 23px Segoe UI, sans-serif";
+  ctx.fillText("CERTIFICATE OF APPRECIATION", W / 2, 148);
+
+  // Occasion Subtitle
+  ctx.fillStyle = "#138808";
+  ctx.font = "bold 19px Segoe UI, sans-serif";
+  ctx.fillText("INDIAN CONSTITUTION DAY QUIZ — 26 NOVEMBER 2026", W / 2, 194);
+
+  // Decorative Ashoka-style Emblem Seal on Left
+  const sealX = 155, sealY = 335;
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(sealX, sealY, 68, 0, Math.PI * 2);
+  ctx.fillStyle = "#EFF6FF";
+  ctx.fill();
+  ctx.lineWidth = 4;
+  ctx.strokeStyle = "#000080";
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.arc(sealX, sealY, 56, 0, Math.PI * 2);
+  ctx.lineWidth = 2;
+  ctx.strokeStyle = "#D4AF37";
+  ctx.stroke();
+
+  // 24 Spokes inside seal
+  for (let a = 0; a < 24; a++) {
+    const rad = (a * Math.PI) / 12;
+    ctx.beginPath();
+    ctx.moveTo(sealX, sealY);
+    ctx.lineTo(sealX + Math.cos(rad) * 52, sealY + Math.sin(rad) * 52);
+    ctx.strokeStyle = "rgba(0, 0, 128, 0.28)";
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+  }
+  ctx.fillStyle = "#000080";
+  ctx.font = "bold 13px Segoe UI, sans-serif";
+  ctx.fillText("SAMVIDHAN", sealX, sealY - 4);
+  ctx.fillText("DIWAS", sealX, sealY + 13);
+  ctx.fillStyle = "#B45309";
+  ctx.font = "bold 12px Segoe UI, sans-serif";
+  ctx.fillText("26 NOV 2026", sealX, sealY + 30);
+  ctx.restore();
+
+  // Certificate Body (Centered slightly right to balance left emblem)
+  const textCenterX = 585;
+  ctx.textAlign = "center";
+  ctx.fillStyle = "#334155";
+  ctx.font = "italic 20px Georgia, serif";
+  ctx.fillText("This Certificate is proudly presented to", textCenterX, 240);
+
+  // Participant Full Name
+  ctx.fillStyle = "#000080";
+  ctx.font = "bold 36px Georgia, serif";
+  ctx.fillText(name.toUpperCase(), textCenterX, 290);
+
+  // Gold Underline
+  ctx.beginPath();
+  ctx.moveTo(315, 302);
+  ctx.lineTo(855, 302);
+  ctx.strokeStyle = "#D4AF37";
+  ctx.lineWidth = 2.5;
+  ctx.stroke();
+
+  // Class & Section
+  ctx.fillStyle = "#1E293B";
+  ctx.font = "bold 20px Segoe UI, sans-serif";
+  ctx.fillText(`(${classMeta})`, textCenterX, 334);
+
+  // Appreciation Matter
+  ctx.fillStyle = "#334155";
+  ctx.font = "19px Segoe UI, sans-serif";
+  ctx.fillText("in appreciation of enthusiastic participation and commendable performance", textCenterX, 376);
+  ctx.fillText("in the Indian Constitution Day Quiz held on 26 November 2026.", textCenterX, 405);
+
+  // Score & Compliment Box
+  ctx.fillStyle = "#EFF6FF";
+  ctx.fillRect(320, 428, 530, 56);
+  ctx.strokeStyle = "#93C5FD";
+  ctx.lineWidth = 2;
+  ctx.strokeRect(320, 428, 530, 56);
+
+  ctx.fillStyle = "#000080";
+  ctx.font = "bold 21px Segoe UI, sans-serif";
+  ctx.fillText(`Score Achieved: ${scoreVal} / 100   |   Compliment: ${compliment}`, textCenterX, 463);
+
+  // Good Wishes Line
+  ctx.fillStyle = "#138808";
+  ctx.font = "italic bold 18px Georgia, serif";
+  ctx.fillText("With Heartfelt Good Wishes for a Bright Future and Dedicated Citizenship!", W / 2, 532);
+
+  // Signatures Block
+  ctx.strokeStyle = "#000080";
+  ctx.lineWidth = 1.8;
+
+  // Left Signature: School Coordinator
+  ctx.beginPath();
+  ctx.moveTo(130, 615);
+  ctx.lineTo(410, 615);
+  ctx.stroke();
+  ctx.fillStyle = "#000080";
+  ctx.font = "bold 19px Segoe UI, sans-serif";
+  ctx.fillText("Santosh Kumar Upadhyay", 270, 642);
+  ctx.fillStyle = "#475569";
+  ctx.font = "16px Segoe UI, sans-serif";
+  ctx.fillText("School Coordinator", 270, 665);
+
+  // Right Signature: Principal
+  ctx.beginPath();
+  ctx.moveTo(640, 615);
+  ctx.lineTo(920, 615);
+  ctx.stroke();
+  ctx.fillStyle = "#000080";
+  ctx.font = "bold 19px Segoe UI, sans-serif";
+  ctx.fillText("Satya Narayan Chhawal", 780, 642);
+  ctx.fillStyle = "#475569";
+  ctx.font = "16px Segoe UI, sans-serif";
+  ctx.fillText("Principal", 780, 665);
+}
+
+function downloadCertificateJPG() {
+  const canvas = document.getElementById("certificateCanvas");
+  const link = document.createElement("a");
+  const cleanName = participantName.replace(/[^a-z0-9]/gi, "_") || "Participant";
+  link.download = `Constitution_Day_Certificate_${cleanName}.jpg`;
+  link.href = canvas.toDataURL("image/jpeg", 0.96);
+  link.click();
+}
+</script>
+</body>
+</html>
